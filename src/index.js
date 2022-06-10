@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import App from './App';
-import Welcome from './components/welcome';
 import Clock from './components/clock';
 import Toggle from './components/toggle';
 import LoginControl from './components/loginControl';
@@ -12,14 +11,21 @@ import NameForm from './components/form';
 import Calculator from './components/calculator';
 import {FancyBorder} from './components/childeren';
 import Product from './components/product';
+import BlurExample from './components/blur';
+import ErrorBoundary from './components/errorBoundary';
 
+const Welcome= React.lazy(()=>import('./components/welcome'))
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const number=[1,2,3,4,5];
 root.render(
   <React.StrictMode>
     <App/>
+    <Suspense fallback={<div>Loading...</div>}>
     <Welcome names='Tarun'/>
+    </Suspense>
+    <ErrorBoundary>
     <Clock />
+    </ErrorBoundary>
     <Toggle />
     <LoginControl/>
     <List numbers={number}/>
@@ -34,6 +40,7 @@ root.render(
       </p>
     </FancyBorder>
     <Product/>
+    <BlurExample/>
   </React.StrictMode>
 );
 

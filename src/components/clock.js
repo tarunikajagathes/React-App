@@ -17,6 +17,7 @@ class Clock extends React.Component {
     });
   }
   render() {
+    // throw new Error('I crashed!');  throws error 
     return <h2>Time: {this.state.date.toLocaleTimeString()}</h2>;
   }
 }
