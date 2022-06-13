@@ -13,6 +13,7 @@ import {FancyBorder} from './components/childeren';
 import Product from './components/product';
 import BlurExample from './components/blur';
 import ErrorBoundary from './components/errorBoundary';
+import { Example } from './components/chosen';
 
 const Welcome= React.lazy(()=>import('./components/welcome'))
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -41,6 +42,7 @@ root.render(
     </FancyBorder>
     <Product/>
     <BlurExample/>
+    <Example/>
   </React.StrictMode>
 );
 
