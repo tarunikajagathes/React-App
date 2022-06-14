@@ -14,6 +14,7 @@ import Product from './components/product';
 import BlurExample from './components/blur';
 import ErrorBoundary from './components/errorBoundary';
 import { Example } from './components/chosen';
+import Parent from './components/model';
 
 const Welcome= React.lazy(()=>import('./components/welcome'))
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -43,6 +44,7 @@ root.render(
     <Product/>
     <BlurExample/>
     <Example/>
+    <Parent />
   </React.StrictMode>
 );
 
