@@ -1,0 +1,11 @@
+[ignore] package.json
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]
