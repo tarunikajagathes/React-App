@@ -16,6 +16,7 @@ import ErrorBoundary from './components/errorBoundary';
 import { Example } from './components/chosen';
 import Parent from './components/model';
 import Render from './components/renderProps';
+import { Hooks } from './components/hooks';
 
 const Welcome= React.lazy(()=>import('./components/welcome'))
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -47,6 +48,7 @@ root.render(
     <Example/>
     <Parent />
     <Render />
+    <Hooks />
   </React.StrictMode>
 );
 
