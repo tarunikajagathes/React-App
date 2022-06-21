@@ -17,6 +17,8 @@ import { Example } from './components/chosen';
 import Parent from './components/model';
 import Render from './components/renderProps';
 import { Hooks } from './components/hooks';
+import PersonList from './components/personList';
+import PersonAdd from './components/PersonAdd';
 
 const Welcome= React.lazy(()=>import('./components/welcome'))
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -49,6 +51,8 @@ root.render(
     <Parent />
     <Render />
     <Hooks />
+    <PersonList />
+    <PersonAdd />
   </React.StrictMode>
 );
 
